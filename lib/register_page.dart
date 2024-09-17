@@ -42,7 +42,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Register Page'),
-        backgroundColor: Colors.pinkAccent,
+        backgroundColor: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -55,7 +55,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Colors.pinkAccent,
+                  color: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
                   shadows: [
                     Shadow(
                       blurRadius: 10.0,
@@ -66,6 +66,11 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               const SizedBox(height: 20),
+              Icon(
+                Icons.account_circle,
+                color: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
+                size: 120,
+              ),
               const SizedBox(height: 40),
               Container(
                 decoration: BoxDecoration(
@@ -90,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Username',
                         prefixIcon: const Icon(
                           Icons.person,
-                          color: Color.fromARGB(255, 64, 204, 255),
+                          color: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -107,7 +112,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Password',
                         prefixIcon: const Icon(
                           Icons.lock,
-                          color: Color.fromARGB(255, 7, 97, 241),
+                          color: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -124,7 +129,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Confirm Password',
                         prefixIcon: const Icon(
                           Icons.lock,
-                          color: Color.fromARGB(255, 16, 142, 246),
+                          color: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -144,8 +149,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
-                  backgroundColor: Color.fromARGB(255, 10, 115, 236),
-                  shadowColor: Color.fromARGB(255, 11, 119, 236).withOpacity(0.5),
+                  backgroundColor: Colors.blueAccent, // เปลี่ยนเป็นสีฟ้า
+                  shadowColor: Colors.blueAccent.withOpacity(0.5), // เปลี่ยนเป็นสีฟ้า
                   elevation: 10.0,
                 ),
                 child: const Text(
@@ -158,7 +163,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   padding: const EdgeInsets.only(top: 16),
                   child: Text(
                     _errorMessage,
-                    style: const TextStyle(color: Color.fromARGB(255, 151, 241, 7), fontSize: 16),
+                    style: const TextStyle(color: Colors.red, fontSize: 16),
                   ),
                 ),
             ],
