@@ -9,7 +9,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   String? userName;
 
   void loadData() async {
@@ -25,17 +24,11 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
   }
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,  // เปลี่ยนเป็นสีฟ้า
+        backgroundColor: Colors.pink,
         title: Text(widget.title),
       ),
       body: Center(
@@ -62,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Hi: ${userName ?? "รอสักครู่"}",
                   style: TextStyle(
                     fontSize: 30,
-                    color: Colors.blue[300],  // เปลี่ยนเป็นสีฟ้า
+                    color: Colors.pink[300],
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
@@ -80,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  backgroundColor: Colors.blue[300],  // เปลี่ยนเป็นสีฟ้า
+                  backgroundColor: Colors.pink[300],
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
                 icon: const Icon(Icons.navigate_next, color: Colors.white),
@@ -105,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const InsertPage()),
                 );
               },
-              backgroundColor: Colors.blue,  // เปลี่ยนเป็นสีฟ้า
+              backgroundColor: Colors.pink,
               tooltip: 'Insert',
               child: const Icon(Icons.add),
             ),
@@ -117,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const DeletePage()),
                 );
               },
-              backgroundColor: Colors.blue,  // เปลี่ยนเป็นสีฟ้า
+              backgroundColor: Colors.pink,
               tooltip: 'Delete',
               child: const Icon(Icons.delete),
             ),
@@ -129,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const UpdatePage()),
                 );
               },
-              backgroundColor: Colors.blue,  // เปลี่ยนเป็นสีฟ้า
+              backgroundColor: Colors.pink,
               tooltip: 'Update',
               child: const Icon(Icons.update),
             ),
@@ -140,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
+//------------หน้า AnotherPage--------------------------------------------
 class AnotherPage extends StatelessWidget {
   const AnotherPage({super.key});
   @override
@@ -155,7 +148,7 @@ class AnotherPage extends StatelessWidget {
     );
   }
 }
-
+//------------หน้า InsertPage--------------------------------------------
 class InsertPage extends StatelessWidget {
   const InsertPage({super.key});
   @override
@@ -214,7 +207,7 @@ class InsertPage extends StatelessWidget {
     );
   }
 }
-
+//------------หน้า DeletePage--------------------------------------------
 class DeletePage extends StatelessWidget {
   const DeletePage({super.key});
   @override
@@ -237,7 +230,7 @@ class DeletePage extends StatelessWidget {
     );
   }
 }
-
+//------------หน้า UpdatePage--------------------------------------------
 class UpdatePage extends StatelessWidget {
   const UpdatePage({super.key});
   @override

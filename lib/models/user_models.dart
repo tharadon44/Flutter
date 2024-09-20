@@ -1,37 +1,61 @@
 // To parse this JSON data, do
 //
-//     final welcome = welcomeFromJson(jsonString);
+//     final usermodel = usermodelFromJson(jsonString);
 
 import 'dart:convert';
 
-Welcome welcomeFromJson(String str) => Welcome.fromJson(json.decode(str));
+Usermodel usermodelFromJson(String str) => Usermodel.fromJson(json.decode(str));
 
-String welcomeToJson(Welcome data) => json.encode(data.toJson());
+String usermodelToJson(Usermodel data) => json.encode(data.toJson());
 
-class Welcome {
-    String userName;
-    String password;
-    String name;
-    String role;
+class Usermodel {
+  User user;
+  String accessToken;
+  String refreshToken;
 
-    Welcome({
-        required this.userName,
-        required this.password,
-        required this.name,
-        required this.role,
-    });
+  Usermodel({
+    required this.user,
+    required this.accessToken,
+    required this.refreshToken,
+  });
 
-    factory Welcome.fromJson(Map<String, dynamic> json) => Welcome(
+  factory Usermodel.fromJson(Map<String, dynamic> json) => Usermodel(
+        user: User.fromJson(json["user"]),
+        accessToken: json["accessToken"],
+        refreshToken: json["refreshToken"],
+      );
+
+  get role => null;
+
+  Map<String, dynamic> toJson() => {
+        "user": user.toJson(),
+        "accessToken": accessToken,
+        "refreshToken": refreshToken,
+      };
+}
+
+class User {
+  String id;
+  String userName;
+  int v;
+
+  User({
+    required this.id,
+    required this.userName,
+    required this.v,
+  });
+
+  factory User.fromJson(Map<String, dynamic> json) => User(
+        id: json["_id"],
         userName: json["user_name"],
-        password: json["password"],
-        name: json["name"],
-        role: json["role"],
-    );
+        v: json["__v"],
+      );
 
-    Map<String, dynamic> toJson() => {
+  get name => null;
+
+  Map<String, dynamic> toJson() => {
+        "_id": id,
         "user_name": userName,
-        "password": password,
-        "name": name,
-        "role": role,
-    };
+        "__v": v,
+      };
 }
