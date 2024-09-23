@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.blue,
         title: Text(widget.title),
       ),
       body: Center(
@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   "Hi: ${userName ?? "รอสักครู่"}",
                   style: TextStyle(
                     fontSize: 30,
-                    color: Colors.pink[300],
+                    color: Colors.blue[300],
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  backgroundColor: Colors.pink[300],
+                  backgroundColor: Colors.blue[300],
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
                 icon: const Icon(Icons.navigate_next, color: Colors.white),
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const InsertPage()),
                 );
               },
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.blue,
               tooltip: 'Insert',
               child: const Icon(Icons.add),
             ),
@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const DeletePage()),
                 );
               },
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.blue,
               tooltip: 'Delete',
               child: const Icon(Icons.delete),
             ),
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => const UpdatePage()),
                 );
               },
-              backgroundColor: Colors.pink,
+              backgroundColor: Colors.blue,
               tooltip: 'Update',
               child: const Icon(Icons.update),
             ),
@@ -133,6 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
 //------------หน้า AnotherPage--------------------------------------------
 class AnotherPage extends StatelessWidget {
   const AnotherPage({super.key});
@@ -140,6 +141,7 @@ class AnotherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('Another Page'),
       ),
       body: const Center(
@@ -148,6 +150,7 @@ class AnotherPage extends StatelessWidget {
     );
   }
 }
+
 //------------หน้า InsertPage--------------------------------------------
 class InsertPage extends StatelessWidget {
   const InsertPage({super.key});
@@ -155,6 +158,7 @@ class InsertPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('เพิ่มสินค้า'),
       ),
       body: Padding(
@@ -207,6 +211,7 @@ class InsertPage extends StatelessWidget {
     );
   }
 }
+
 //------------หน้า DeletePage--------------------------------------------
 class DeletePage extends StatelessWidget {
   const DeletePage({super.key});
@@ -214,6 +219,7 @@ class DeletePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('ลบสินค้า'),
       ),
       body: Center(
@@ -230,6 +236,7 @@ class DeletePage extends StatelessWidget {
     );
   }
 }
+
 //------------หน้า UpdatePage--------------------------------------------
 class UpdatePage extends StatelessWidget {
   const UpdatePage({super.key});
@@ -237,6 +244,7 @@ class UpdatePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('แก้ไขสินค้า'),
       ),
       body: Padding(

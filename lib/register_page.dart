@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testlab/controllers/auth_service.dart';
+import 'package:testlab/models/user_models.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -42,7 +44,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Register Page'),
-        backgroundColor: Colors.blueAccent, 
+        backgroundColor: Colors.pinkAccent,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -55,7 +57,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent, 
+                  color: Colors.pinkAccent,
                   shadows: [
                     Shadow(
                       blurRadius: 10.0,
@@ -66,9 +68,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
               ),
               const SizedBox(height: 20),
+              // ใช้ไอคอนแทนรูปภาพ
               Icon(
                 Icons.account_circle,
-                color: Colors.blueAccent, 
+                color: Colors.pinkAccent,
                 size: 120,
               ),
               const SizedBox(height: 40),
@@ -95,7 +98,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Username',
                         prefixIcon: const Icon(
                           Icons.person,
-                          color: Colors.blueAccent, 
+                          color: Colors.pinkAccent,
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -112,7 +115,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Password',
                         prefixIcon: const Icon(
                           Icons.lock,
-                          color: Colors.blueAccent, 
+                          color: Colors.pinkAccent,
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -129,7 +132,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         labelText: 'Confirm Password',
                         prefixIcon: const Icon(
                           Icons.lock,
-                          color: Colors.blueAccent, 
+                          color: Colors.pinkAccent,
                         ),
                         filled: true,
                         fillColor: Colors.white70,
@@ -149,8 +152,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
                   ),
-                  backgroundColor: Colors.blueAccent, 
-                  shadowColor: Colors.blueAccent.withOpacity(0.5), 
+                  backgroundColor: Colors.pinkAccent,
+                  shadowColor: Colors.pinkAccent.withOpacity(0.5),
                   elevation: 10.0,
                 ),
                 child: const Text(

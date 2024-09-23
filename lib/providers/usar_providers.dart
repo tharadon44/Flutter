@@ -7,20 +7,25 @@ class UserProvider extends ChangeNotifier {
   String? _refreshToken;
 
   User get user => _user!;
-  String get accessToken => _accessToken!;
-  String get refreshToken => _refreshToken!;
+  String? get accessToken => _accessToken;
+  String? get refreshToken => _refreshToken;
 
-  void onLogin(Usermodel userModel){
+  void onLogin(Usermodel userModel ) async {
     _user = userModel.user;
     _accessToken = userModel.accessToken;
     _refreshToken = userModel.refreshToken;
     notifyListeners();
-  }
+  } 
 
   void onLogout() {
     _user = null;
     _accessToken = null;
     _refreshToken = null;
+    notifyListeners();
+  }
+
+  void updateAccessToken(String newAccess) {
+    _accessToken = newAccess;
     notifyListeners();
   }
 }
